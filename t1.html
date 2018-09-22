@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Slide Show</title>
+<style>
+.mySlides {display:none;}
+</style>
+<body background="pattern.png">
+<font face="Brush Script MT" color="#816687"
+size= "6"> <h3> <center> <i> Clasic Romance </i> </center> </h3></font>
+<div>
+ <center> <img class="mySlides" src="c1.png" > </center>
+<center> <img class="mySlides" src="c2.png" > </center>
+<center> <img class="mySlides" src="c3.png" > </center>
+<center> <img class="mySlides" src="c4.png" > </center>
+<center> <img class="mySlides" src="c5.png" > </center>
+<center> <img class="mySlides" src="c6.png" > </center>
+<center> <img class="mySlides" src="c7.png" > </center>
+<center> <img class="mySlides" src="c8.png" > </center>
+<center> <img class="mySlides" src="c9.png" > </center>
+<center> <img class="mySlides" src="c10.png" > </center>
+  <!-- you can add more pics with above path -->
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>

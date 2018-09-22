@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>NDK</title>
+<style>
+.mySlides {display:none;}
+</style>
+<body background="pattern.png">
+
+
+<div>
+<center> <i><font face="Brush Script MT" size="6" color="#816687"><h3> NDK Kalyana Mandir   </i></font></center>
+<center>
+<br><br><br><br><br><br>
+  <img class="mySlides" src="ndk.1.png" style="width:60%" height="400">
+  <img class="mySlides" src="ndk.2.png" style="width:60%" height="400">
+  <img class="mySlides" src="ndk.3.png" style="width:60%" height="400">
+  <img class="mySlides" src="ndk.4.png" style="width:60%" height="400">
+  <img class="mySlides" src="ndk.5.png" style="width:60%" height="400">
+  </center>
+  <!-- you can add more pics with above path -->
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>

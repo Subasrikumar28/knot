@@ -1,0 +1,198 @@
+<?php 		
+session_start();																			
+$db=mysqli_connect('localhost','root','','wedding');
+if(isset($_POST['submit']))
+{ 
+  $venue=mysqli_real_escape_string($db,$_POST['Select']);
+  $_SESSION["vid"] = $venue;
+  mysqli_query($db,$sql);
+		header('location:hotel.php');
+
+}
+?>
+<html>
+<head>
+<body background="pattern.png">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Bell MT;
+}
+.button
+{
+ background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align:right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+div.z
+{
+  text-align: right;
+}
+
+
+.main 
+{
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+
+.row,
+.row >
+ .column 
+{
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 900px) 
+{
+    .column 
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px)
+ {
+    .column 
+    {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+<font face ="Pacifico" color="#816687" > <h2>  <center>Venue</center></font>
+</h2>
+
+
+<div class="main">
+
+
+<hr>
+
+<form method="POST">
+<font face="Pacifico" >
+
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+     <a href="temple.html"> <img src="temp.1.jpg" alt="Mountains" width="100%" height="150"> </a>
+
+      
+      The Temple Tree Leisure<br>
+      <input type="Radio" name="selection" value="1" >Select
+      <p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="element.html"><img src="ele.3.jpg" alt="Lights" width="100%" height="150"></a>
+      Elements<br><input type="Radio" name="selection" value="2"  >Select
+      <p>
+</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+   <a href="sidhartha.html"> <img src="sid.3.jpg" width="100%" height="150"></a>
+    Sidhartha Mandapa <br><input type="Radio" name="selection" value="3" >Select
+      <p> </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+  <a href="ndk.html">  <img src="ndk.5.png" width="100%" height="150"></a>
+      NDK Klayana Mandir<br><input type="Radio" name="selection" value="4" >Select
+      <p></p>
+    </div>
+  </div>
+  
+
+<!-- END GRID -->
+
+<div class="column">
+    <div class="content">
+    <a href="ganjam.html"><img src="gan.1.jpg" alt="Nature" width="100%" height="150"></a>
+      Ganjam Mandir<br><input type="Radio" name="selection" value="5"  >Select
+      <p></p>
+    </div>
+  </div>
+<div class="column">
+    <div class="content">
+    <a href="padmavathi.html"><img src="pad.1.jpg" alt="Nature" width="100%" height="150"></a>
+      Sree Padmavathi Mandapa<br><input type="Radio" name="selection" value="6" >Select
+      <p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="balan.html"><img src="balan.1.jpg" width="100%" height="150"></a>
+      Balan ConventionCenter<br><input type="Radio" name="selection" value="7"  >Select
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+    <a href="vl.html"><img src="vl.5.jpg" width="100%" height="150"></a>
+      V Legacy Convention Center<br><input type="Radio" name="selection" value="8"  >Select
+      <p></p>
+    </div>
+  </div>
+
+  
+<br>
+<br>
+
+</div>
+<!-- END MAIN -->
+</div>
+
+  <div class="z">
+<button class="button">Next</button>
+<input  type="submit" value="submit" name="submit" />
+</form>
+</div>
+</font>
+</body>
+</html>

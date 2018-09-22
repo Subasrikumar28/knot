@@ -1,0 +1,8 @@
+<video loop muted autoplay poster="1.jpg" class="fullscreen-bg__video">
+        <source src="bgv.webm" type="video/webm">
+        <source src="bgv.mp4" type="video/mp4">
+        <source src="bgv.ogv" type="video/ogg
+		
+    </video>
+</div>
+<input type="button" onclick="alert('Hello World!')" value="Click ">

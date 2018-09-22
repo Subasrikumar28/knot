@@ -1,0 +1,197 @@
+<?php 		
+session_start();																			
+$db=mysqli_connect('localhost','root','','wedding');
+if(isset($_POST['submit']))
+{ 
+  $theme=mysqli_real_escape_string($db,$_POST['Select']);
+  $_SESSION["tid"] = $theme;
+  mysqli_query($db,$sql);
+		header('location:hotel.php');
+
+}
+?>
+<html>
+<head>
+<body background="pattern.png">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Bell MT;
+}
+.button
+{
+ background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align:right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+div.z
+{
+  text-align: right;
+}
+
+
+.main 
+{
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+
+.row,
+.row >
+ .column 
+{
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 900px) 
+{
+    .column 
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px)
+ {
+    .column 
+    {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<font face ="Brush Script MT" color="#816687" size = "6"> <h3>  <i><center>Accomodation </center></i>
+</h3></font>
+
+<div class="main">
+
+
+<hr>
+
+
+<form method="POST>
+
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+     <a href="comfort inn.html"> <img src="comfort inn insys.jpg" alt="Mountains" width="100%" height="150"> </a>
+
+      
+      <h3>Comfort INN inysys</h3>
+      <input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="lords.html"><img src="lords eco inn.jpg" alt="Lights" width="100%" height="150"></a>
+      <h3>Lords eco INN </h3><input type="Radio" name="selection"  >Select
+      <p>
+</p>
+    </div>
+  </div>
+
+  
+  <div class="column">
+    <div class="content">
+   <a href="zone.html"> <img src="zone by the park infantry.jpg" alt="Nature" width="100%" height="150"></a>
+      <h3>Zone by the park infantry</h3><input type="Radio" name="selection"  >Select
+      <p> </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+  <a href="fern.html">  <img src="the fern residency.jpg" width="100%" height="150"></a>
+      <h3>The fern residency</h3><input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+  
+
+<!-- END GRID -->
+
+<div class="column">
+    <div class="content">
+    <a href="lemon.html"><img src="lemon tree.jpg" alt="Nature" width="100%" height="150"></a>
+      <h3>Lemon Tree</h3><input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+<div class="column">
+    <div class="content">
+    <a href="fortune.html"><img src="fortune park jp celestial.jpg" alt="Nature" width="100%" height="150"></a>
+      <h3>Fortune park JP celestial</h3><input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="golden.html"><img src="golden tulip.jpg" width="100%" height="150"></a>
+      <h3>Golden Tulip</h3><input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+    <a href="paul.html"><img src="paul.jpg" width="100%" height="150"></a>
+      <h3>The paul</h3><input type="Radio" name="selection"  >Select
+      <p></p>
+    </div>
+  </div>
+
+ 
+<br>
+<br>
+
+</div>
+<!-- END MAIN -->
+</div>
+
+  <div class="z">
+<button class="button">Next</button>
+<input  type="submit" value="submit" name="submit" />
+</form>
+</div>
+</body>
+</html>

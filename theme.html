@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+.b{
+	height: 40px;
+	width: 240px;
+border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 10px;
+	}
+.button
+{
+    background-color: 	#C0C0C0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.a
+{
+text-align: right;
+}
+
+body {
+    
+    padding: 20px;
+    font-family: Arial;
+background="pattern.png";
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<body >
+
+<font face="Pacifico" color="#BDB76B"> 
+<h2> <center> Themes </center> </h2>
+
+<!-- Portfolio Gallery Grid -->
+<form method="POST">
+<div class="row">
+  <div class="column">
+    <div class="content">
+     <a href="t1.html"><img src="c3.png" style="width:100%" ></a>
+      <h3>Classic Style</h3>
+<p><font color="#696969">Classic weddings are defined by lovers of tradition -- the heart and soul of Style Me Pretty Weddings. They can be understated and inspired, white on white, organically elegant, or some combination of family traditions passed down through the ages as well as new twists on an age-old passion for romance.</font></p>
+  <input type="radio" value="Classic Style" name="Select" >Select
+   </div>
+  </div>
+  <div class="column">
+    <div class="content">
+     <a href="t2.html"><img src="e4.png" style="width:100%"></a>
+      <h3>Ethnic Style</h3>
+<input type="radio" value="Ethnic Style" name="Select" >Select
+
+  </div>
+  </div>
+  <div class="column">
+    <div class="content">
+     <a href="t3.html"><img src="s1.png" style="width:100%"></a>
+      <h3>Sea Side </h3>
+<input type="radio" value="Sea Side" name="Select" >Select
+ </div>
+  </div>
+  <div class="column">
+    <div class="content">
+     <a href="t4.html"><img src="v1.png"  style="width:100%"></a>
+      <h3>Vintage</h3>
+<input type="radio" value="Vintage" name="Select" >Select
+      </div>
+  </div>
+<div class="a">
+<input  class="b" type="submit" value="submit" name="submit" /></font>
+</div>
+</div>
+<!-- END GRID -->
+</div>
+<!-- END MAIN -->
+</div>
+</form>
+</body>
+</html>
+<?php 		
+echo $theme;																			
+$db=mysqli_connect('localhost','root','','wedding');
+if(isset($_POST['submit']))
+{ 
+  $theme=mysqli_real_escape_string($db,$_POST['Select']);
+  echo $theme;
+  $sql="INSERT INTO choice VALUES (LAST_INSERT_ID(),'1','1','1','$theme','1','1','1','1')";
+  mysqli_query($db,$sql);
+		header('location:hotel.html');
+
+}
+
+
+?>

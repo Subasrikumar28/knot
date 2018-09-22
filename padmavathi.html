@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>Padmavathi</title>
+<style>
+.mySlides {display:none;}
+</style>
+<body background="pattern.png">
+<font face="Bell Mt" size="4">
+<br>
+<br>
+<center> <i><font face="Brush Script MT" size="6" color="#816687"><h3> Sree Padmavathi Kalyana Mandapa</i></font></center>
+<div>
+<center>
+<br><br><br><br> 
+ <img class="mySlides" src="sid.1.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="sid.2.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="sid.3.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="sid.4.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="sid.5.jpg" style="width:60%" height="400">
+  </center>
+  <!-- you can add more pics with above path -->
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script><br><br>
+<hr>
+
+<table cellspacing="20">
+  <tr>
+    <td>
+      <b>Cost per night</b> 
+    </td>
+    <td>
+     <b> Facilities</b>
+    </td>
+    <td>
+      <b>No.of rooms available</b>
+
+    </td>
+    </tr>
+    <tr>
+    <td>
+      1,20,000
+    </td>
+    <td>
+      The main hall can accomadate 600 people.<br>
+      24 hours security.<br>
+      1 hour free generator.<br>
+      Dinning hall can accomodate 250-300 people in one sitting.<br>
+    </td>
+    <td>
+      4 rooms available - 1 for groom,1 for bride,2 for guests.
+    </td>
+  </tr>
+</table>
+
+
+</font>
+</body>
+</html>

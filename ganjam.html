@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Ganjam</title>
+<style>
+.mySlides {display:none;}
+</style>
+<body background="pattern.png">
+
+
+<div>
+<center> <i><font face="Brush Script MT" size="6" color="#816687"><h3> Ganjam Mandapa</i></font></center>
+<center>
+<br><br><br><br><br><br>
+  <img class="mySlides" src="gan.1.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="gan.2.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="gan.3.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="gan.4.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="gan.5.jpg" style="width:60%" height="400">
+  <img class="mySlides" src="gan.6.jpg" style="width:60%" height="400">
+  </center>
+  <!-- you can add more pics with above path -->
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>
